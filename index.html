@@ -1,96 +1,151 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abdallah Ahmed | Web Developer Portfolio</title>
-  <meta name="description" content="Explore Abdallah Ahmed’s professional portfolio featuring web development projects, responsive design, and SEO-friendly best practices.">
-  <link rel="canonical" href="https://yourdomain.com/">
-  <meta name="robots" content="index, follow">
+/* === Global Reset & Font === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Abdallah Ahmed | Web Developer Portfolio">
-  <meta property="og:description" content="Explore Abdallah Ahmed’s web development projects and responsive designs.">
-  <meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80">
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  line-height: 1.6;
+  background-color: #fafafa;
+}
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Abdallah Ahmed | Web Developer Portfolio">
-  <meta name="twitter:description" content="Explore Abdallah Ahmed’s web development projects and responsive designs.">
+/* === Navigation Bar === */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 12px 0;
+  backdrop-filter: blur(6px);
+}
 
-  <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="style.css">
+nav ul li {
+  margin: 0 18px;
+}
 
-  <!-- JSON-LD structured data (Person) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Abdallah Ahmed",
-    "url": "https://yourdomain.com/",
-    "jobTitle": "Web Developer",
-    "sameAs": [
-      "https://github.com/Bhlool005"
-    ]
+nav a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+  color: #ffd700;
+  text-decoration: underline;
+}
+
+/* === Hero Section === */
+.hero {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  color: #fff;
+  background: url("https://images.stockcake.com/public/f/4/d/f4d3f8c9-a3b5-423a-9b1b-be32b9ab1e2e_large/majestic-mountain-view-stockcake.jpg")
+              no-repeat center center/cover;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 20px;
+}
+
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(255,255,255,0.7);
+  margin-bottom: 15px;
+}
+
+/* === Button === */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #ffd700;
+  color: #333;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #fff07c;
+  transform: scale(1.05);
+}
+
+/* === What I Do Section === */
+.what-i-do {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+  border-top: 3px solid #eee;
+}
+
+.what-i-do h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.what-i-do p {
+  max-width: 700px;
+  margin: 0 auto 15px;
+}
+
+/* === Footer === */
+footer {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 15px 0;
+  font-size: 0.9rem;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
   }
-  </script>
-</head>
-<body>
-  <a class="skip-link" href="#main-content">Skip to content</a>
+  .hero {
+    padding: 70px 20px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
 
-  <!-- ===== HEADER & NAVIGATION ===== -->
-  <header>
-    <nav aria-label="Main navigation">
-      <ul class="main-nav">
-        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- ===== MAIN CONTENT ===== -->
-  <main id="main-content">
-
-    <!-- HERO SECTION -->
-    <section 
-      class="hero" 
-      role="region" 
-      aria-label="Intro" 
-      style="background-image: url('https://images.stockcake.com/public/f/4/d/f4d3f8c9-a3b5-423a-9b1b-be32b9ab1e2e_large/majestic-mountain-view-stockcake.jpg');"
-    >
-      <div class="hero-content">
-        <img 
-          src="images/profile.jpg" 
-          srcset="images/profile-480.jpg 480w, images/profile-800.jpg 800w" 
-          sizes="(max-width:600px) 120px, 200px" 
-          alt="Portrait of Abdallah Ahmed, web developer" 
-          class="profile-img" 
-          loading="lazy"
-        >
-        <h1>Welcome to Abdallah Ahmed’s Web Development Portfolio</h1>
-        <p class="lead">I’m a passionate <strong>web developer</strong> focused on creating <em>responsive</em> and <em>SEO-optimized</em> websites that deliver great user experiences.</p>
-        <p><a href="projects.html" class="btn">View My Projects</a></p>
-      </div>
-    </section>
-
-    <!-- ABOUT / SERVICES SECTION -->
-    <section class="what-i-do">
-      <h2>What I Do</h2>
-      <p>I specialize in building clean, accessible, and mobile-friendly websites using <strong>HTML, CSS, and JavaScript</strong>. I also integrate SEO best practices to help sites rank better on search engines.</p>
-      <p>Learn more about <a href="about.html">me and my background</a>.</p>
-    </section>
-
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer>
-    <p>© 2025 Abdallah Ahmed | 
-      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
-        Learn more about HTML
-      </a>
-    </p>
-  </footer>
-</body>
-</html>
