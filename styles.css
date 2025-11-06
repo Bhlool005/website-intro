@@ -1,62 +1,63 @@
 /* =======================
-   GLOBAL STYLES
+   GLOBAL RESET & BASE
 ======================= */
-body {
-  font-family: 'Poppins', Arial, sans-serif;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  color: #fff;
   line-height: 1.6;
-  color: #222;
-  background-color: #fafafa;
-  scroll-behavior: smooth;
+  background: url("data:image/jpeg;base64,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...") center center / cover no-repeat fixed;
+  background-attachment: fixed;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  color: #111;
-  margin-bottom: 10px;
-}
-
-p {
-  color: #444;
-  max-width: 700px;
-  margin: 0 auto 20px auto;
-  padding: 0 10px;
+/* Add subtle dark overlay for text readability */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: -1;
 }
 
 /* =======================
    NAVIGATION BAR
 ======================= */
 nav {
-  background: linear-gradient(90deg, #111, #333);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10;
+  padding: 10px 0;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 10px 0;
-  margin: 0;
+  list-style: none;
 }
 
-nav ul li {
+nav li {
   margin: 0 20px;
 }
 
 nav a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
-  letter-spacing: 0.5px;
-  transition: color 0.3s, text-shadow 0.3s;
+  transition: color 0.3s, transform 0.2s;
 }
 
-nav a.active, nav a:hover {
+nav a:hover, nav a.active {
   color: #00b4d8;
-  text-shadow: 0 0 10px #00b4d8;
+  transform: scale(1.05);
 }
 
 /* =======================
@@ -65,86 +66,54 @@ nav a.active, nav a:hover {
 .hero {
   text-align: center;
   padding: 100px 20px;
-  background: url('https://images.stockcake.com/public/f/4/d/f4d3f8c9-a3b5-423a-9b1b-be32b9ab1e2e_large/majestic-mountain-view-stockcake.jpg')
-              center center/cover no-repeat;
   color: #fff;
-  position: relative;
-}
-
-.hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.45);
-  z-index: 0;
-}
-
-.hero h1, .hero p, .hero .btn {
-  position: relative;
-  z-index: 1;
 }
 
 .hero h1 {
-  font-size: 2.5em;
+  font-size: 2.8rem;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 .hero p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
   margin-bottom: 20px;
 }
 
-/* Profile image */
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  margin-bottom: 15px;
-  z-index: 1;
-  position: relative;
-}
-
-/* Button styling */
 .btn {
   display: inline-block;
-  margin-top: 10px;
   padding: 12px 25px;
   background: #00b4d8;
-  color: #fff;
-  border-radius: 6px;
+  color: white;
+  border-radius: 25px;
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: 0.3s;
 }
 
 .btn:hover {
   background: #0077b6;
-  transform: translateY(-3px);
+  transform: scale(1.05);
 }
 
 /* =======================
-   PROJECTS SECTION
+   CONTENT SECTIONS
 ======================= */
-.project {
-  padding: 40px 20px;
-  margin: 20px auto;
+section {
+  background: rgba(255, 255, 255, 0.1);
+  margin: 40px auto;
+  padding: 40px 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  width: 90%;
   max-width: 900px;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  color: #f0f0f0;
 }
 
-.project:hover {
-  transform: translateY(-5px);
-}
-
-.project h2 {
-  color: #0077b6;
+section h2 {
+  color: #00b4d8;
+  margin-bottom: 15px;
+  text-shadow: 0 1px 5px rgba(0,0,0,0.3);
 }
 
 /* =======================
@@ -152,11 +121,11 @@ nav a.active, nav a:hover {
 ======================= */
 footer {
   text-align: center;
-  background: #111;
-  color: white;
-  padding: 15px 0;
-  margin-top: 40px;
-  font-size: 0.9em;
+  padding: 20px 0;
+  color: #ccc;
+  font-size: 0.9rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
 }
 
 /* =======================
@@ -168,16 +137,11 @@ footer {
   }
 
   .hero {
-    padding: 80px 10px;
+    padding: 70px 10px;
   }
 
   .hero h1 {
-    font-size: 2em;
-  }
-
-  .project {
-    margin: 10px;
-    padding: 25px;
+    font-size: 2rem;
   }
 }
 
