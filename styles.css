@@ -45,8 +45,9 @@ nav a.active {
   text-align: center;
   padding: 100px 20px;
   color: #fff;
-  background: url("https://media.gettyimages.com/id/1433485090/video/dots-makes-global-world-map-global-wireframe-polygonal-lines.jpg?s=640x640&k=20&c=6TpfX8QHt9IPnF0s5HkwOaNoqcNbtYP99Ceh7-iR8MI=") 
-    no-repeat center center/cover;
+background: url("https://media.gettyimages.com/id/1433485090/video/dots-makes-global-world-map-global-wireframe-polygonal-lines.jpg?s=640x640&k=20&c=6TpfX8QHt9IPnF0s5HkwOaNoqcNbtYP99Ceh7-iR8MI=")
+            center center/cover no-repeat;
+
   background-attachment: fixed;
 }
 
