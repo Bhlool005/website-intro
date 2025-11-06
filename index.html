@@ -4,30 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdallah Ahmed | Web Developer Portfolio</title>
-  <meta name="description" content="Explore Abdallah Ahmed’s professional portfolio featuring web development projects, responsive design, and SEO optimization work.">
-  <link rel="stylesheet" href="style.css">
-</head>
+  <meta name="description" content="Explore Abdallah Ahmed’s professional portfolio featuring web development projects, responsive design, and SEO-friendly best practices.">
+  <link rel="canonical" href="https://yourdomain.com/">
+  <meta name="robots" content="index, follow">
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abdallah Ahmed | Web Developer Portfolio">
+  <meta property="og:description" content="Explore Abdallah Ahmed’s web development projects and responsive designs.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Abdallah Ahmed | Web Developer Portfolio">
+  <meta name="twitter:description" content="Explore Abdallah Ahmed’s web development projects and responsive designs.">
+
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSON-LD structured data (Person) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Abdallah Ahmed",
+    "url": "https://yourdomain.com/",
+    "jobTitle": "Web Developer",
+    "sameAs": [
+      "https://github.com/Bhlool005"
+    ]
+  }
+  </script>
+</head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header>
     <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="index.html" class="active">Home</a></li>
+      <ul class="main-nav">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
-      <img src="images/profile.jpg" alt="Portrait of Abdallah Ahmed, web developer" class="profile-img">
-      <h1>Welcome to Abdallah Ahmed’s Web Development Portfolio</h1>
-      <p>I’m a passionate <strong>web developer</strong> focused on creating <em>responsive</em> and <em>SEO-optimized</em> websites that deliver great user experiences.</p>
-      <a href="projects.html" class="btn">View My Projects</a>
+  <main id="main-content">
+    <section class="hero" role="region" aria-label="Intro">
+      <div class="hero-content">
+        <img src="images/profile.jpg" srcset="images/profile-480.jpg 480w, images/profile-800.jpg 800w" sizes="(max-width:600px) 120px, 200px" alt="Portrait of Abdallah Ahmed, web developer" class="profile-img" loading="lazy">
+        <h1>Welcome to Abdallah Ahmed’s Web Development Portfolio</h1>
+        <p class="lead">I’m a passionate <strong>web developer</strong> focused on creating <em>responsive</em> and <em>SEO-optimized</em> websites that deliver great user experiences.</p>
+        <p><a href="projects.html" class="btn">View My Projects</a></p>
+      </div>
     </section>
 
-    <section>
+    <section class="what-i-do">
       <h2>What I Do</h2>
       <p>I specialize in building clean, accessible, and mobile-friendly websites using <strong>HTML, CSS, and JavaScript</strong>. I also integrate SEO best practices to help sites rank better on search engines.</p>
       <p>Learn more about <a href="about.html">me and my background</a>.</p>
@@ -35,7 +66,7 @@
   </main>
 
   <footer>
-    <p>© 2025 Abdallah Ahmed | <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">Learn more about HTML</a></p>
+    <p>© 2025 Abdallah Ahmed | <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Learn more about HTML</a></p>
   </footer>
 </body>
 </html>
