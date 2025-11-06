@@ -1,151 +1,40 @@
-/* === Global Reset & Font === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdallah Ahmed | Portfolio</title>
+  <meta name="description" content="Welcome to Abdallah Ahmed’s professional portfolio — showcasing web development, responsive design, and SEO projects.">
+  <link rel="stylesheet" href="style.css">
+</head>
 
-body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  color: #222;
-  line-height: 1.6;
-  background-color: #fafafa;
-}
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </header>
 
-/* === Navigation Bar === */
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  background: rgba(0, 0, 0, 0.85);
-  padding: 12px 0;
-  backdrop-filter: blur(6px);
-}
+  <section class="hero">
+    <div class="hero-content">
+      <img src="https://i.imgur.com/OV4F3qM.png" alt="Abdallah Ahmed profile" class="profile-img">
+      <h1>Welcome to My Portfolio</h1>
+      <p>Hi, I’m Abdallah — a web developer passionate about creating clean, responsive, and SEO-optimized websites.</p>
+      <a href="projects.html" class="btn">View My Work</a>
+    </div>
+  </section>
 
-nav ul li {
-  margin: 0 18px;
-}
+  <section class="what-i-do">
+    <h2>What I Do</h2>
+    <p>I build modern, user-friendly websites that combine performance, design, and accessibility.</p>
+  </section>
 
-nav a {
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav a:hover, nav a.active {
-  color: #ffd700;
-  text-decoration: underline;
-}
-
-/* === Hero Section === */
-.hero {
-  position: relative;
-  text-align: center;
-  padding: 100px 20px;
-  color: #fff;
-  background: url("https://images.stockcake.com/public/f/4/d/f4d3f8c9-a3b5-423a-9b1b-be32b9ab1e2e_large/majestic-mountain-view-stockcake.jpg")
-              no-repeat center center/cover;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.hero h1 {
-  font-size: 2.3rem;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 0 auto 20px;
-}
-
-.profile-img {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  box-shadow: 0 0 10px rgba(255,255,255,0.7);
-  margin-bottom: 15px;
-}
-
-/* === Button === */
-.btn {
-  display: inline-block;
-  padding: 12px 25px;
-  background: #ffd700;
-  color: #333;
-  border-radius: 30px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  background: #fff07c;
-  transform: scale(1.05);
-}
-
-/* === What I Do Section === */
-.what-i-do {
-  padding: 60px 20px;
-  text-align: center;
-  background: #fff;
-  border-top: 3px solid #eee;
-}
-
-.what-i-do h2 {
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.what-i-do p {
-  max-width: 700px;
-  margin: 0 auto 15px;
-}
-
-/* === Footer === */
-footer {
-  text-align: center;
-  background: #333;
-  color: #fff;
-  padding: 15px 0;
-  font-size: 0.9rem;
-  margin-top: 20px;
-}
-
-footer a {
-  color: #ffd700;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* === Responsive === */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column;
-  }
-  .hero {
-    padding: 70px 20px;
-  }
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-}
-
+  <footer>
+    <p>© 2025 Abdallah Ahmed | <a href="about.html">About Me</a></p>
+  </footer>
+</body>
+</html>
