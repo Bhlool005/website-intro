@@ -1,6 +1,4 @@
-/* =======================
-   GLOBAL RESET & BASE
-======================= */
+/* === Global Reset & Font === */
 * {
   margin: 0;
   padding: 0;
@@ -8,140 +6,153 @@
 }
 
 body {
-  font-family: "Poppins", Arial, sans-serif;
-  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
   line-height: 1.6;
-  background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQDw8QDw8QFQ8PFhUPFRAVDxUVFRYPFRUWGBUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OFxAQFS0dHR0tLS0tLS0tKy0tLS0tLS0rLS0tLSsrLS0tLS0rLS0vLS0tLS0tLS0tKystLS0tLTc3K//AABEIALcBEwMBIgACEQEDEQH/xAAaAAADAQEBAQAAAAAAAAAAAAAAAQIDBAUH/8QARRAAAgECAwMIBgcFBgcAAAAAAQIAAxEEEiExQVEFEzJhcYGR8BQiUnKSoSMzQlOCscEVQ2Ki0QZEVJOz0iRjc4OUo7L/xAAXAQEBAQEAAAAAAAAAAAAAAAAAAQID/8QAHhEBAQEAAgEFAAAAAAAAAAAAAAERITESQVFSodH/2gAMAwEAAhEDEQA/APkN45iQR2S1ad3NUDC8UILxR2ihThJDDiPGOAQEIQCOEIBGjEEEGxGoI3GEIG9VAw5xRYbGUbFY7x/Cd3A6cL1ydiBSrU3YXRTZxa96TArUHepYd8yo1CpuOwgi4IO0EbwZpUpBgWp9EC7Je5Tj2r17t/EmfTCxmGNKo9Jjc02K34gbGHURY98xnfXXnaC1R9ZQC0ag40ujRqd2lM9lPjOG0LKllvMyCP6ze0LRis1MsSGS2yXRUsQqgljuAufCEOMC+m86Wm4povTbM3sIR831HhfugcUwFksg4JcX7W6R7yZRLYN7esoW+52VD4OQZJwdttWkB7zH/wCVMkCOTBS0F++pf+z/AGS/RTpZqZvwqqPkxB+U5inDwgDA1q0WTpKy39pSL9l9siaUa7JorEA7R9k9qnQy8yN0gEb2lBy/iXd2r8Mo52MQaaVqRU2Ybdb3uCNxB2EdcxZbSDS8J3V+RMRTwlDGuq+j12NNGzgtmF9q7QDZvhN7aX88NKtlir9sIDs+UIZZzMrbZLivI0kNKBiYcJN4HThMO1R1pra7X1JsoUC7Mx3KACSeozrbHLSNsMo00596Yao511UNcUhroB63FjsCwGmHxbg+tlp0vw1KgLfJLdjGefC9PQPLeJOj1mdfZqBaqn8LgiKrSSrTapSTI9P1qlEElclwOcp3JIUEi6km1wQbXy8E7uQ2/wCKoAi61HWiw4pV+jcfC5g7cMcLW04b44QQhHCFHCOUEqmxUgqSCNQQbEdhiEcK7cHjFVw5ADaq1lvTqIwsyVKelgRtK9oFxeaYvks/WYe9TDsbAr6zIxF+bqLYEMLGxsMw101A86b4TEvSJK2swysjDMjr7LqdGH5GxFiAZMZs52IOHcaFHB4FTLXB1LXyMB7TDKPiawncpp1PqqzUGP7qo7mnfXoVRcjscC3tmQeRcS3rLTNQe1TdK1++mTB5OXm0XpvmPsp+rkW8A0irVJBVQEU7VXf7xOrd5twAnYvImLP91xA96i6jxYCP9kVB9Y9Cn7+Ip3+BCzfKDY8sSxO/0fDLbPXd9txRokD/ADKpUj4DF6XRS3N4RSR9qtWeofBMi/Iwa4ibbZPOr7S+InopyvWUk0+ap3+7w9GmfjVAx7zD9s4v/GYr/wAmr/ulOXArA7CD2GIqJ6P7ZxJBDV3qA7qtq48KwYRnF0X0rYdVP3lA823fTN0PYAnaIHl7I7ztxOAypziOKlG4BqKCCpOwVUOtMnvB3EzhIhW9CsLZHvkJvcbVb2l/Ub+2xGdSmVYqbXG8HSx1BB4EEHvEi83Y5qYO+mcn4Wuy+BD+IkGuKw9P0aiy4ktVLODh7GyDT1hwJsuu/T2TPOVt2+ddSpT5tFCWqAks99o3C3nZ1znZbyraL+bCEyKGEgqERhALwnrf2WxdahjKNXD0Uq1kJK02XMCCCCf4dD0ri3ynnYp2NSozKFZmZmQJkCsWJKhfsgG4tutC435LqLepSqMFTELzecmwWoGVqbMdwzKATwYmc1ek9N2SopV0OVlO0GRO2nyh6qpWppVRNFzFldVGxVqKQbdTZgNwkHGJ6PJQNO+JOgpXFO46WII9QD3bhz1ADawmaYnDrquGYtu53El1H4aaUyfimWKxT1SC5HqjKqhQqqvsoo0Udkp0wAtpHCOGRCEoCUK0ccBAYhaMRwEIWjtHKFEyg7QPCXaEDMUxwHhKtKtFAIo4QJtGI4jAcUIoGuGxL0nDobGxU3AIZD0lZToyneDpNsXQVk5+iLJcK9O5JpVDs1OpptY5WO+6nUAtxkzbBYo0nzWzKwKOhNg9JukhO7iDuIB2gSJjmIm2F1FVddUJ+Ah/yQjvl4/DCm9lbNTYCpTfZmpN0SRuOhUjcysN0nAi9RR7V0+JSv6yK547ybxwAmERhAmKKEjTq5NLc6hSpzbDZUva2k56m03Nzc+te9zfbffeKEoIxACO0IVpULQtCCMQtHaUAEqFo4BHCOACOMCO0oQEdo7R2lRMJVoWgTCO0UBRSopAoo4oUSTHEZBBMWaUwvMWBHZCvUwx52g9I9Ojmr0utLXrU/Ac4Pcfe04qFQK6MdisrdwIP6RYTFNTdKiGzoQ4O64N9eI6p0cp0VV70x9DVAq0+pGv6h61YMh60kZzLjnr08rsvssV8Db9JE3xeuV/bAJ98aP3kjN+Kc94WC8cAev5whcZwhGJARxRyqYjhCEOEIQGJQiEcoYjgIxCGBGBARiUAlAQAlASoVo7SrQtLiJtFLtEYVBERlSTIFEY4jIEYoRQokxxSBRRmelyNyZSrpimq4ulQNCkaqLUveq9+gtvDS59YWB1sWTXjsnDwnfhG52i9H7dHNXp8SlvpqY7gHHuPxnHeVRqMjrUQ2dCGVusbL8RMpeYqg4IKMQAdVY7Ffr6jsPYDumboVJVhYjaJ0cpUVBWrTFqNa5C/d1BbPS/CSLcVKnjMkrggLUBKjQMOkvZxHUe4iCXjYyvCb+jA7KlMjddsp8DqIo04coaUDEyT2KOPqjk2rh/RKZpNWWocXzfrq4GiBvlfcGI+1Dc5eVCIGVKycBARwglWijlU4xFKhBKEQjEoYlCIShKihKEkShLBVoWjEZlRBiMZkmQIyTGZJkUjJMcRkCMUDEYUGTGZJkUTs5OfDAV/SEqMxQilkYC1XifJG3Q3E4jN8NijTFQBVPOLkN1vYdXnhBHPCKEg6MJiQuZKilqNS2dRbMCL5XQnY63PaCQdDM8Zg2pWNw1J+hVXosP0Yb1OomJm+Gxb07gWKN0qbDMjW2XXj1ixG4iGbLOY5rwncamFOpoVgeC4hco7M1Mm3aTCQ8r8b9frknYrVfRmXnrUc4Jo59r7jb9Oq+6cQMcsbTa0oGVJywihKkrKgOOKOUOOISoQxHFGJQxKEkShKipQkiEsRoDC8i8d4UzJMCZJMBEySYyZJkAZJjMkyKDJMZkyKIjCKAGKBhIEYoGKCCKOKFEIQkQlU3sASeoTpTCVT+6qfA39I2xr7DUIGzKGyjwGkybCOfWyOevKT84TW4wVX7t/hMT4aovSpuBxKEfmJyggGxtfhvm9KoV6LFT1Ej8pTlIjE39KY9MK/vD1vjFm+dpXMq/1ZIb7tiLn3W0DdhseF4GEYhbxGnfC...") center center / cover no-repeat fixed;
-  background-attachment: fixed;
-  min-height: 100vh;
-  overflow-x: hidden;
+  background-color: #fafafa;
 }
 
-/* Add subtle dark overlay for text readability */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  z-index: -1;
-}
-
-/* =======================
-   NAVIGATION BAR
-======================= */
-nav {
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  padding: 10px 0;
-}
-
+/* === Navigation Bar === */
 nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style: none;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 12px 0;
+  backdrop-filter: blur(6px);
 }
 
-nav li {
-  margin: 0 20px;
+nav ul li {
+  margin: 0 18px;
 }
 
 nav a {
-  color: #fff;
-  text-decoration: none;
+  color: white;
   font-weight: 600;
-  transition: color 0.3s, transform 0.2s;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-nav a:hover, nav a.active {
-  color: #00b4d8;
-  transform: scale(1.05);
+nav a:hover,
+nav a.active {
+  color: #ffd700;
+  text-decoration: underline;
 }
 
-/* =======================
-   HERO SECTION
-======================= */
+/* === Hero Section === */
 .hero {
+  position: relative;
   text-align: center;
   padding: 100px 20px;
   color: #fff;
+  background: url("https://media.gettyimages.com/id/1433485090/video/dots-makes-global-world-map-global-wireframe-polygonal-lines.jpg?s=640x640&k=20&c=6TpfX8QHt9IPnF0s5HkwOaNoqcNbtYP99Ceh7-iR8MI=") 
+    no-repeat center center/cover;
+  background-attachment: fixed;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+  font-weight: 700;
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 25px;
+  color: #f1f1f1;
 }
 
+.profile-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+  margin-bottom: 15px;
+}
+
+/* === Button === */
 .btn {
   display: inline-block;
   padding: 12px 25px;
-  background: #00b4d8;
-  color: white;
-  border-radius: 25px;
+  background: #ffd700;
+  color: #333;
+  border-radius: 30px;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #0077b6;
+  background: #fff07c;
   transform: scale(1.05);
 }
 
-/* =======================
-   CONTENT SECTIONS
-======================= */
-section {
-  background: rgba(255, 255, 255, 0.1);
-  margin: 40px auto;
-  padding: 40px 25px;
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  width: 90%;
-  max-width: 900px;
-  color: #f0f0f0;
+/* === What I Do Section === */
+.what-i-do {
+  padding: 60px 20px;
+  text-align: center;
+  background: #fff;
+  border-top: 3px solid #eee;
 }
 
-section h2 {
-  color: #00b4d8;
+.what-i-do h2 {
+  color: #333;
   margin-bottom: 15px;
-  text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+  font-size: 1.8rem;
 }
 
-/* =======================
-   FOOTER
-======================= */
+.what-i-do p {
+  max-width: 700px;
+  margin: 0 auto 15px;
+  font-size: 1rem;
+}
+
+/* === Footer === */
 footer {
   text-align: center;
-  padding: 20px 0;
-  color: #ccc;
+  background: #333;
+  color: #fff;
+  padding: 15px 0;
   font-size: 0.9rem;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
+  margin-top: 20px;
 }
 
-/* =======================
-   RESPONSIVE DESIGN
-======================= */
-@media (max-width: 768px) {
+footer a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive Design === */
+@media (max-width: 600px) {
   nav ul {
     flex-direction: column;
   }
 
   .hero {
-    padding: 70px 10px;
+    padding: 70px 20px;
   }
 
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
-
