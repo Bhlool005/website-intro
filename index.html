@@ -20,7 +20,7 @@
   <meta name="twitter:description" content="Explore Abdallah Ahmed’s web development projects and responsive designs.">
 
   <link rel="icon" href="/favicon.ico">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 
   <!-- JSON-LD structured data (Person) -->
   <script type="application/ld+json">
@@ -38,6 +38,8 @@
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ===== HEADER & NAVIGATION ===== -->
   <header>
     <nav aria-label="Main navigation">
       <ul class="main-nav">
@@ -48,25 +50,47 @@
     </nav>
   </header>
 
+  <!-- ===== MAIN CONTENT ===== -->
   <main id="main-content">
-    <section class="hero" role="region" aria-label="Intro">
+
+    <!-- HERO SECTION -->
+    <section 
+      class="hero" 
+      role="region" 
+      aria-label="Intro" 
+      style="background-image: url('https://images.stockcake.com/public/f/4/d/f4d3f8c9-a3b5-423a-9b1b-be32b9ab1e2e_large/majestic-mountain-view-stockcake.jpg');"
+    >
       <div class="hero-content">
-        <img src="images/profile.jpg" srcset="images/profile-480.jpg 480w, images/profile-800.jpg 800w" sizes="(max-width:600px) 120px, 200px" alt="Portrait of Abdallah Ahmed, web developer" class="profile-img" loading="lazy">
+        <img 
+          src="images/profile.jpg" 
+          srcset="images/profile-480.jpg 480w, images/profile-800.jpg 800w" 
+          sizes="(max-width:600px) 120px, 200px" 
+          alt="Portrait of Abdallah Ahmed, web developer" 
+          class="profile-img" 
+          loading="lazy"
+        >
         <h1>Welcome to Abdallah Ahmed’s Web Development Portfolio</h1>
         <p class="lead">I’m a passionate <strong>web developer</strong> focused on creating <em>responsive</em> and <em>SEO-optimized</em> websites that deliver great user experiences.</p>
         <p><a href="projects.html" class="btn">View My Projects</a></p>
       </div>
     </section>
 
+    <!-- ABOUT / SERVICES SECTION -->
     <section class="what-i-do">
       <h2>What I Do</h2>
       <p>I specialize in building clean, accessible, and mobile-friendly websites using <strong>HTML, CSS, and JavaScript</strong>. I also integrate SEO best practices to help sites rank better on search engines.</p>
       <p>Learn more about <a href="about.html">me and my background</a>.</p>
     </section>
+
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer>
-    <p>© 2025 Abdallah Ahmed | <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">Learn more about HTML</a></p>
+    <p>© 2025 Abdallah Ahmed | 
+      <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
+        Learn more about HTML
+      </a>
+    </p>
   </footer>
 </body>
 </html>
